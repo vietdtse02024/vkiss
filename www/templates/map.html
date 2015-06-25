@@ -3,9 +3,9 @@
         <h1 class="title">Map</h1>
     </ion-header-bar>
     <ion-content scroll="false">
-        <map on-create="mapCreated(map)"></map>
+        <map on-create="mapCreated(map)" id="map-canvas"></map>
         <ion-footer-bar class="bar-stable">
-            <a ng-click="centerOnMe(map)" class="button button-icon icon ion-navigate"></a>
+            <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate"></a>
         </ion-footer-bar>
     </ion-content>
 </ion-view>

@@ -25,12 +25,12 @@ angular.module('starter.directives', ['starter.services'])
                     return false;
                 });
 
-                google.maps.event.addListener(map, 'click', function (event) {
-                    marker = new google.maps.Marker({
-                        position: event.latLng,
-                        map: map
-                    });
-                });
+                //google.maps.event.addListener(map, 'click', function (event) {
+                //    marker = new google.maps.Marker({
+                //        position: event.latLng,
+                //        map: map
+                //    });
+                //});
             }
 
             if (document.readyState === "complete") {
