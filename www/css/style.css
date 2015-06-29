@@ -37,3 +37,23 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+.spinner svg {
+  width: 30% !important;
+  height: 85px !important;
+  vertical-align: middle;
+}
+
+.center-spinner center{ 
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  padding-top: 70%;
+  transform: translate(-50%,-50%);
+  background: #999;
+  opacity: 0.8;
+}
+
+
