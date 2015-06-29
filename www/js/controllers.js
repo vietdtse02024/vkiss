@@ -1,6 +1,6 @@
 angular.module('starter.controllers', ['starter.services'])
 
-.controller('AppCtrl', function ($scope, $ionicModal, $timeout, $state) {
+.controller('AppCtrl', function ($scope, $ionicModal, $timeout, $state, $ionicLoading) {
     $scope.loginData = {};
 
     // Create the login modal that we will use later
@@ -23,22 +23,19 @@ angular.module('starter.controllers', ['starter.services'])
     // Perform the login action when the user submits the login form
     $scope.doLogin = function () {
         console.log('Doing login', $scope.loginData);
-
-        // Simulate a login delay. Remove this and replace with your login
-        // code if using a login system
-        $timeout(function () {
-            $scope.closeLogin();
-        }, 1000);
+        $ionicLoading.show({
+            template: '<ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner>',
+            duration: 1000
+        });
     };
 
     $scope.checkLogin = function () {
-        $scope.name = "Mr. Viet";
-        var check = 3;
+        var check = 2;
         if (check == 1) {
             console.log('Got login', check);
             $state.go('app.tabs');
         } else if (check == 2) {
-            $state.go('app.playlists');
+            $state.go('login');
         }
     }
 })
