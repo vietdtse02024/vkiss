@@ -39,9 +39,8 @@ body {
 }
 
 .spinner svg {
-  width: 30% !important;
+  width: 15% !important;
   height: 85px !important;
-  vertical-align: middle;
 }
 
 .center-spinner center{ 
@@ -52,7 +51,7 @@ body {
   width: 100%;
   padding-top: 70%;
   transform: translate(-50%,-50%);
-  background: #999;
+  background: #009df8;
   opacity: 0.8;
 }
 
