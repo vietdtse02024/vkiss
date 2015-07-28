@@ -4,7 +4,8 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.directives'])
+'use strict'
+angular.module('fyviapp', ['ionic'])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -20,114 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     });
 })
 
-.config(function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
-
-    .state('app', {
-        url: "/app",
-        abstract: true,
-        templateUrl: "templates/menu.html",
-        controller: 'AppCtrl'
-    })
-
-    .state('app.search', {
-        url: "/search",
-        views: {
-            'menuContent': {
-                templateUrl: "templates/search.html"
-            }
-        }
-    })
-
-    .state('app.browse', {
-        url: "/browse",
-        views: {
-            'menuContent': {
-                templateUrl: "templates/browse.html"
-            }
-        }
-    })
-      .state('app.playlists', {
-          url: "/playlists",
-          views: {
-              'menuContent': {
-                  templateUrl: "templates/playlists.html",
-                  controller: 'PlaylistsCtrl'
-              }
-          }
-      })
-
-    .state('app.single', {
-        url: "/playlists/:playlistId",
-        views: {
-            'menuContent': {
-                templateUrl: "templates/playlist.html",
-                controller: 'PlaylistCtrl'
-            }
-        }
-    })
-     .state('app.map', {
-         url: "/map",
-         views: {
-             'menuContent': {
-                 templateUrl: "templates/map.html",
-                 controller: 'MapCtrl'
-             }
-         }
-     })
-
-
-    // Each tab has its own nav history stack:
-    .state('app.tabs', {
-        url: "/tab",
-        views: {
-            'menuContent': {
-                templateUrl: "templates/tabs.html"
-            }
-        }
-    })
-    .state('app.tabs.dash', {
-        url: '/dash',
-        views: {
-            'tab-dash': {
-                templateUrl: 'templates/tab-dash.html'
-            }
-        }
-    })
-
-    .state('app.tabs.chats', {
-        url: '/chats',
-        views: {
-            'tab-chats': {
-                templateUrl: 'templates/tab-chats.html',
-                controller: 'ChatsCtrl'
-            }
-        }
-    })
-      .state('app.tabs.chat-detail', {
-          url: '/chats/:chatId',
-          views: {
-              'tab-chats': {
-                  templateUrl: 'templates/chat-detail.html',
-                  controller: 'ChatsDetailCtrl'
-              }
-          }
-      })
-
-    .state('app.tabs.account', {
-        url: '/account',
-        views: {
-            'tab-account': {
-                templateUrl: 'templates/tab-account.html',
-                controller: 'AccountCtrl'
-            }
-        }
-    })
-    .state('start', {
-        url: "/start",
-        templateUrl: "templates/checking-login.html",
-        controller: 'AppCtrl'
-    });
+.config(function ($urlRouterProvider) {
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/start');
+    $urlRouterProvider.otherwise('/login');
 });

@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['starter.services'])
+angular.module('fyviapp')
 
 .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $state) {
     $scope.loginData = {};
