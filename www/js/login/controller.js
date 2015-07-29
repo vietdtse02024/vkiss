@@ -1,5 +1,5 @@
 ﻿angular.module('fyviapp')
-.controller('LoginCtrl', function ($scope, $state) {
+.controller('LoginCtrl', function ($scope, $state, $http) {
     $scope.doLogin = function () {
         $scope.name = "Mr. Viet";
         var check = 1;
@@ -9,5 +9,11 @@
         } else if (check == 2) {
             $state.go('app.playlists');
         }
-    }
+    };
+
+    $scope.closeLogin = function () {
+        $http.get('http://localhost:8082/fyvi-ws/fyvi/account/get-list-friends').success(function (response) {
+            $scope.model = response;
+        });
+    };
 });
