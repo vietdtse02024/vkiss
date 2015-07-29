@@ -1,4 +1,4 @@
-angular.module('starter.directives', ['starter.services'])
+angular.module('fyviapp')
 
 .directive('map', function (MapService) {
     return {

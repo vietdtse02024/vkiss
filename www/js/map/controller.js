@@ -1,79 +1,10 @@
-angular.module('fyviapp')
-
-.controller('AppCtrl', function ($scope, $ionicModal, $timeout, $state, $ionicLoading) {
-    $scope.loginData = {};
-
-    // Create the login modal that we will use later
-    $ionicModal.fromTemplateUrl('templates/login.html', {
-        scope: $scope
-    }).then(function (modal) {
-        $scope.modal = modal;
-    });
-
-    // Triggered in the login modal to close it
-    $scope.closeLogin = function () {
-        $scope.modal.hide();
-    };
-
-    // Open the login modal
-    $scope.login = function () {
-        $scope.modal.show();
-    };
-
-    // Perform the login action when the user submits the login form
-    $scope.doLogin = function () {
-        console.log('Doing login', $scope.loginData);
-        $ionicLoading.show({
-            template: '<ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner>',
-            duration: 1000
-        });
-    };
-
-    $scope.checkLogin = function () {
-        var check = 2;
-        if (check == 1) {
-            console.log('Got login', check);
-            $state.go('app.tabs');
-        } else if (check == 2) {
-            $state.go('login');
-        }
-    }
-})
-
-.controller('PlaylistsCtrl', function ($scope) {
-    $scope.playlists = [
-      { title: 'Reggae', id: 1 },
-      { title: 'Chill', id: 2 },
-      { title: 'Dubstep', id: 3 },
-      { title: 'Indie', id: 4 },
-      { title: 'Rap', id: 5 },
-      { title: 'Cowbell', id: 6 }
-    ];
-})
-
-.controller('PlaylistCtrl', function ($scope, $stateParams) {
-})
-.controller('ChatsDetailCtrl', function ($scope, $stateParams, Chats) {
-    $scope.chat = Chats.get($stateParams.chatId);
-})
-
-.controller('AccountCtrl', function ($scope) {
-    $scope.settings = {
-        enableFriends: true
-    };
-})
-.controller('ChatsCtrl', function ($scope, Chats) {
-    $scope.chats = Chats.all();
-    $scope.remove = function (chat) {
-        Chats.remove(chat);
-    }
-})
+﻿angular.module('fyviapp')
 .controller('MapCtrl', function ($scope, $ionicLoading, MapService) {
     $scope.mapCreated = function (map) {
         $scope.map = map;
     };
 
-    $scope.createMarker = function(latLng) {
+    $scope.createMarker = function (latLng) {
         var marker = new MarkerWithLabel({
             position: latLng,
             draggable: true,
@@ -125,7 +56,7 @@ angular.module('fyviapp')
             content: 'Getting current location...',
             showBackdrop: false
         });
-        
+
         navigator.geolocation.getCurrentPosition(function (pos) {
             console.log('Got pos', pos);
             var curPos = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);

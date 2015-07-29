@@ -36,15 +36,6 @@ angular.module('fyviapp').config(function($stateProvider){
             }
         }
     })
-      .state('app.tabs.chat-detail', {
-          url: '/chats/:chatId',
-          views: {
-              'tab-chats': {
-                  templateUrl: 'templates/chat-detail.html',
-                  controller: 'ChatsDetailCtrl'
-              }
-          }
-      })
 
     .state('app.tabs.account', {
         url: '/account',

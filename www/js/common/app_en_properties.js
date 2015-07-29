@@ -1,4 +1,5 @@
-﻿angular.module('starter.translation', ['ionic', 'pascalprecht.translate'])
+﻿'use strict'
+angular.module('fyviapp')
 
 .config(function ($translateProvider) {
     $translateProvider.translations('en', {

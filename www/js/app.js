@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 'use strict'
-angular.module('fyviapp', ['ionic'])
+angular.module('fyviapp', ['ionic', 'pascalprecht.translate'])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
