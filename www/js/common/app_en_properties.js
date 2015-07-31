@@ -3,10 +3,11 @@ angular.module('fyviapp')
 
 .config(function ($translateProvider) {
     $translateProvider.translations('en', {
-        LOGIN_TITLE: 'REGIST ACCOUNT'
+        'login.title' : 'Login',
     });
     $translateProvider.translations('vi', {
-        LOGIN_TITLE: 'Đăng ký tài khoản' 
+        'login.title': 'Đăng nhập',
+        'regist.title': 'Đăng ký tài khoản',
     });
     $translateProvider.preferredLanguage('vi');
 });

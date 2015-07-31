@@ -1,13 +1,7 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.controllers' is found in controllers.js
 'use strict'
 angular.module('fyviapp', ['ionic', 'pascalprecht.translate'])
 
-.run(function ($ionicPlatform) {
+.run(function ($ionicPlatform, $rootScope, IConstants, $http) {
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -19,6 +13,12 @@ angular.module('fyviapp', ['ionic', 'pascalprecht.translate'])
             StatusBar.styleDefault();
         }
     });
+    $rootScope.checkAccountExist = function () {
+        $http.get(IConstants.CHECK_ACCOUNT_EXIST_URL+'/0975938499').success(function (response) {
+            $rootScope.isAccountExist = response.account;
+        });
+    };
+    $rootScope.checkAccountExist();
 })
 
 .config(function ($urlRouterProvider) {
