@@ -39,8 +39,11 @@ body {
 }
 
 .spinner svg {
-  width: 15% !important;
-  height: 85px !important;
+    position: absolute;
+    width: 29% !important;
+    height: 45px !important;
+    top:40%; 
+    left  : 35%;
 }
 
 .center-spinner center{ 
@@ -55,4 +58,7 @@ body {
   opacity: 0.8;
 }
 
+.start-screen {
+    background-color: deepskyblue;
+}
 

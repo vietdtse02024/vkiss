@@ -1,5 +1,5 @@
 ﻿angular.module('fyviapp')
-.controller('LoginCtrl', function ($scope, $state, $http) {
+.controller('LoginCtrl', function ($scope, $state, $http, $cordovaDevice) {
     $scope.doLogin = function () {
         $scope.name = "Mr. Viet";
         var check = 1;
@@ -12,8 +12,9 @@
     };
 
     $scope.closeLogin = function () {
-        $http.get('http://localhost:8082/fyvi-ws/fyvi/account/get-list-friends').success(function (response) {
-            $scope.model = response;
-        });
+        console.log($cordovaDevice.getUUID());
+        //$http.get('http://localhost:8082/fyvi-ws/fyvi/account/get-list-friends').success(function (response) {
+        //    $scope.model = response;
+        //});
     };
 });
