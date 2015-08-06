@@ -1,7 +1,11 @@
 'use strict'
-angular.module('fyviapp', ['ionic', 'pascalprecht.translate'])
+angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
 
-.run(function ($ionicPlatform, $rootScope, IConstants, $http, $state) {
+.run(function ($ionicPlatform, $rootScope, IConstants, $http, $state, $cordovaPlugin) {
+    document.addEventListener("deviceready", function () {
+        $cordovaPlugin.someFunction().then(success, error);
+    }, false);
+
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
