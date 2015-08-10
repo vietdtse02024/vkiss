@@ -1,7 +1,7 @@
 'use strict'
 angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
 
-.run(function ($ionicPlatform, $rootScope, IConstants, $http, $state, $cordovaPlugin) {
+.run(function ($ionicPlatform, $rootScope, IConstants, $http, $state) {
     document.addEventListener("deviceready", function () {
         $cordovaPlugin.someFunction().then(success, error);
     }, false);
