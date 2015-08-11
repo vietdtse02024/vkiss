@@ -1,26 +1,20 @@
-﻿angular.module('fyviapp')
-.controller('LoginCtrl', function ($scope, $state, $http, $cordovaDevice) {
+﻿'use strict'
+angular.module('fyviapp')
+.controller('LoginCtrl', function ($scope, $state, $http, $cordovaDevice, IConstants) {
+
     $scope.doLogin = function () {
-        $scope.name = "Mr. Viet";
-        var check = 1;
-        if (check == 1) {
-            console.log('Got login', check);
-            $state.go('app.tabs');
-        } else if (check == 2) {
-            $state.go('app.playlists');
-        }
+        console.log('Doing login', $scope.loginData);
+        $scope.uuid = $cordovaDevice.getUUID();
     };
 
-    $scope.closeLogin = function () {
-        console.log($cordovaDevice.getUUID());
-        //$http.get('http://localhost:8082/fyvi-ws/fyvi/account/get-list-friends').success(function (response) {
-        //    $scope.model = response;
-        //});
-    };
-
-    $scope.regist = function () {
-        $http.get('http://localhost:8082/fyvi-ws/fyvi/account/regist-account').success(function (response) {
+    $scope.regist = function (registData) {
+        var phoneNo = registData.phoneNumber;
+        var fullName = registData.fullName;
+        var accountName = registData.accountName;
+        var password = registData.password;
+        $http.get(IConstants.REGIST_ACCOUNT + '/' + phoneNo + '/' + fullName + '/' + accountName + '/' + password).success(function (response) {
             $scope.model = response;
+            $state.go('app.tabs');
         });
     };
 });

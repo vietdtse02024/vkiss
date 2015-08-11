@@ -22,10 +22,10 @@ angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
     $rootScope.checkAccountExist = function () {
         $http.get(IConstants.CHECK_ACCOUNT_EXIST_URL+'/0975938499').success(function (response) {
             var isAccountExist = response.account;
-            if (isAccountExist || isAccountExist == null) {
+            if (!isAccountExist || isAccountExist == null) {
                 $state.go('register');
             } else {
-                $state.go('app.tabs');
+                $state.go('login');
             }
         });
     };

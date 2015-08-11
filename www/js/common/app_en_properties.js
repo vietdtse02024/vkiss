@@ -13,6 +13,7 @@ angular.module('fyviapp')
         'regist.account_name': 'Tên tài khoản',
         'regist.full_name': 'Họ tên',
         'regist.birtday': 'Tên tài khoản',
+        'regist.password': 'Mật khẩu',
 
         // btn
         'btn.regist': 'Đăng ký',
