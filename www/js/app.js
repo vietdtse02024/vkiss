@@ -25,7 +25,7 @@ angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
             if (!isAccountExist || isAccountExist == null) {
                 $state.go('register');
             } else {
-                $state.go('login');
+                $state.go('app.tabs');
             }
         });
     };
