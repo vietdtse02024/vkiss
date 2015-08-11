@@ -1,23 +1,24 @@
 ﻿<ion-modal-view>
   <ion-header-bar>
     <h1 class="title">{{'regist.title' | translate}}</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div>
   </ion-header-bar>
   <ion-content>
-    <form ng-submit="doLogin()">
+    <form ng-submit="regist()">
       <div class="list">
         <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
+          <span class="input-label">{{'regist.phone_no' | translate}}</span>
+          <input type="text" ng-model="condition.phoneNo" maxlength="15">
         </label>
         <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
+            <span class="input-label">{{'regist.full_name' | translate}}</span>
+            <input type="text" ng-model="condition.fullName" maxlength="50">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">{{'regist.account_name' | translate}}</span>
+            <input type="text" ng-model="condition.accountName" maxlength="50">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
+          <button class="button button-block button-positive" type="submit">{{'btn.regist' | translate}}</button>
         </label>
       </div>
     </form>

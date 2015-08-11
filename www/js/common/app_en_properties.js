@@ -3,11 +3,20 @@ angular.module('fyviapp')
 
 .config(function ($translateProvider) {
     $translateProvider.translations('en', {
-        'login.title' : 'Login',
+        'login.title': 'Login',
+        'regist.title': 'Registration',
     });
     $translateProvider.translations('vi', {
         'login.title': 'Đăng nhập',
         'regist.title': 'Đăng ký tài khoản',
+        'regist.phone_no': 'Số điện thoại',
+        'regist.account_name': 'Tên tài khoản',
+        'regist.full_name': 'Họ tên',
+        'regist.birtday': 'Tên tài khoản',
+
+        // btn
+        'btn.regist': 'Đăng ký',
+
     });
     $translateProvider.preferredLanguage('vi');
 });

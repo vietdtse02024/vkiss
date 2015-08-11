@@ -10,5 +10,9 @@ angular.module('fyviapp').config(function($stateProvider){
         url: "/starter",
         templateUrl: "templates/login/starter.html",
         controller: 'LoginCtrl'
+    }).state('register', {
+        url: "/register",
+        templateUrl: "templates/login/register.html",
+        controller: 'LoginCtrl'
     });
 });

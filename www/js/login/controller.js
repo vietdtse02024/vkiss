@@ -17,4 +17,10 @@
         //    $scope.model = response;
         //});
     };
+
+    $scope.regist = function () {
+        $http.get('http://localhost:8082/fyvi-ws/fyvi/account/regist-account').success(function (response) {
+            $scope.model = response;
+        });
+    };
 });

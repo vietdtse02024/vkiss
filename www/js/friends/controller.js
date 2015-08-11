@@ -2,7 +2,7 @@
 .controller('FriendsCtrl', function ($scope, Chats, $http) {
     $scope.chats = Chats.all();
     
-    $scope.remove = function (chat) {
+    $scope.remove = function (chat) { 
         Chats.remove(chat);
     }
 
