@@ -1,16 +1,17 @@
 <ion-view view-title="Tabs">
     <ion-tabs class="tabs-icon-top tabs-color-active-positive">
-        <!-- Dashboard Tab -->
-        <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/app/tab/dash">
+        <!-- Diary Tab -->
+        <ion-tab title="{{'home.diary' | translate}}" icon-off="ion-ios-bookmarks-outline" icon-on="ion-ios-bookmarks" href="#/app/tab/dash">
             <ion-nav-view name="tab-dash"></ion-nav-view>
         </ion-tab>
-        <!-- Chats Tab -->
-        <ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/app/tab/chats">
-            <ion-nav-view name="tab-chats"></ion-nav-view>
+        <!-- Friends Tab -->
+        <ion-tab title="{{'home.friends' | translate}}" icon-off="ion-ios-people-outline" icon-on="ion-ios-people" href="#/app/tab/friends">
+            <ion-nav-view name="tab-friends"></ion-nav-view>
         </ion-tab>
-        <!-- Account Tab --> 
-        <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/app/tab/account">
-            <ion-nav-view name="tab-account"></ion-nav-view>
+        <!-- Request Tab -->
+        <ion-tab title="{{'home.request' | translate}}" icon-off="ion-ios-personadd-outline" icon-on="ion-ios-personadd" href="#/app/tab/friends">
+            <ion-nav-view name="tab-friends"></ion-nav-view>
         </ion-tab>
+
     </ion-tabs>
 </ion-view>

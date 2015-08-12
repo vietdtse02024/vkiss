@@ -20,11 +20,11 @@ angular.module('fyviapp').config(function($stateProvider){
         }
     })
 
-    .state('app.tabs.chats', {
-        url: '/chats',
+    .state('app.tabs.friends', {
+        url: '/friends',
         views: {
-            'tab-chats': {
-                templateUrl: 'templates/friends/tab-chats.html',
+            'tab-friends': {
+                templateUrl: 'templates/friends/tab-friends.html',
                 controller: 'FriendsCtrl'
             }
         }

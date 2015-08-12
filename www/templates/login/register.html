@@ -14,14 +14,11 @@
             <input type="text" ng-model="registData.fullName" maxlength="50">
         </label>
         <label class="item item-input">
-            <span class="input-label">{{'regist.account_name' | translate}}</span>
-            <input type="text" ng-model="registData.accountName" maxlength="50">
+            <span class="input-label">{{'regist.password' | translate}}</span>
+            <input type="password" ng-model="registData.password" maxlength="50">
         </label>
-          <label class="item item-input">
-              <span class="input-label">{{'regist.password' | translate}}</span>
-              <input type="password" ng-model="registData.password" maxlength="50">
-          </label><label class="item">
-          <button class="button button-block button-positive" type="submit">{{'btn.regist' | translate}}</button>
+        <label class="item">
+            <button class="button button-block button-positive" type="submit">{{'btn.regist' | translate}}</button>
         </label>
       </div>
     </form>

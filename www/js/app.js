@@ -1,7 +1,7 @@
 'use strict'
 angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
 
-.run(function ($ionicPlatform, $rootScope, IConstants, $http, $state) {
+.run(function ($ionicPlatform, $rootScope, IConstants, $http, $state, $cordovaDevice) {
     document.addEventListener("deviceready", function () {
         $cordovaPlugin.someFunction().then(success, error);
     }, false);
@@ -17,10 +17,10 @@ angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
             StatusBar.styleDefault();
         }
     });
-    var device = ionic.Platform.device();
-    var uuid = device.uuid;
+    //$rootScope.uuid = $cordovaDevice.getUUID();
+    $rootScope.uuid = 'fmndbgvdfv564r5345f4x56v4x65v4';
     $rootScope.checkAccountExist = function () {
-        $http.get(IConstants.CHECK_ACCOUNT_EXIST_URL+'/0975938499').success(function (response) {
+        $http.get(IConstants.CHECK_ACCOUNT_EXIST_URL + '/' + $rootScope.uuid).success(function (response) {
             var isAccountExist = response.account;
             if (!isAccountExist || isAccountExist == null) {
                 $state.go('register');

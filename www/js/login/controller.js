@@ -8,11 +8,16 @@ angular.module('fyviapp')
     };
 
     $scope.regist = function (registData) {
-        var phoneNo = registData.phoneNumber;
-        var fullName = registData.fullName;
-        var accountName = registData.accountName;
-        var password = registData.password;
-        $http.get(IConstants.REGIST_ACCOUNT + '/' + phoneNo + '/' + fullName + '/' + accountName + '/' + password).success(function (response) {
+        registData["uuid"] = $scope.uuid;
+        $http({
+            url: IConstants.REGIST_ACCOUNT,
+            method: "POST",
+            data: registData,
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        }).success(function (response) {
             $scope.model = response;
             $state.go('app.tabs');
         });
