@@ -18,8 +18,7 @@ angular.module('fyviapp')
                 "Accept": "application/json"
             }
         }).success(function (response) {
-            $scope.model = response;
-            $state.go('app.tabs');
+            $scope.checkAccountExist();
         });
     };
 });

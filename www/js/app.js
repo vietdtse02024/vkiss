@@ -21,8 +21,8 @@ angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
     $rootScope.uuid = 'fmndbgvdfv564r5345f4x56v4x65v4';
     $rootScope.checkAccountExist = function () {
         $http.get(IConstants.CHECK_ACCOUNT_EXIST_URL + '/' + $rootScope.uuid).success(function (response) {
-            var isAccountExist = response.account;
-            if (!isAccountExist || isAccountExist == null) {
+        	$rootScope.frontUserOnline = response.account;
+            if (!$rootScope.frontUserOnline || $rootScope.frontUserOnline == null) {
                 $state.go('register');
             } else {
                 $state.go('app.tabs');

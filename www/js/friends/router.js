@@ -25,7 +25,6 @@ angular.module('fyviapp').config(function($stateProvider){
         views: {
             'tab-friends': {
                 templateUrl: 'templates/friends/tab-friends.html',
-                controller: 'FriendsCtrl'
             }
         }
     })
@@ -33,7 +32,7 @@ angular.module('fyviapp').config(function($stateProvider){
     .state('app.tabs.account', {
         url: '/account',
         views: {
-            'tab-account': {
+            'tab-friend-request': {
                 templateUrl: 'templates/friends/tab-account.html'
             }
         }

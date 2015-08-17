@@ -1,4 +1,4 @@
-<ion-view view-title="Tabs">
+<ion-view view-title="Tabs" ng-init="initDash()">
     <ion-tabs class="tabs-icon-top tabs-color-active-positive">
         <!-- Diary Tab -->
         <ion-tab title="{{'home.diary' | translate}}" icon-off="ion-ios-bookmarks-outline" icon-on="ion-ios-bookmarks" href="#/app/tab/dash">
@@ -9,8 +9,8 @@
             <ion-nav-view name="tab-friends"></ion-nav-view>
         </ion-tab>
         <!-- Request Tab -->
-        <ion-tab title="{{'home.request' | translate}}" icon-off="ion-ios-personadd-outline" icon-on="ion-ios-personadd" href="#/app/tab/friends">
-            <ion-nav-view name="tab-friends"></ion-nav-view>
+        <ion-tab title="{{'home.request' | translate}}" icon-off="ion-ios-personadd-outline" icon-on="ion-ios-personadd" href="#/app/tab/account">
+            <ion-nav-view name="tab-friend-request"></ion-nav-view>
         </ion-tab>
 
     </ion-tabs>

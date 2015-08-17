@@ -21,6 +21,8 @@ angular.module('fyviapp')
         'home.diary': 'Nhật ký',
         'home.friends': 'Bạn bè',
         'home.request': 'Yêu cầu',
+        'home.friends.title': 'Danh sách bạn bè',
+        'last.update.location': 'Mới cập nhật vị trí',
 
         // btn
         'btn.regist': 'Đăng ký',
