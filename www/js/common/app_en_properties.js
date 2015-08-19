@@ -16,6 +16,9 @@ angular.module('fyviapp')
         'regist.full_name': 'Họ tên',
         'regist.birtday': 'Tên tài khoản',
         'regist.password': 'Mật khẩu',
+        'regist.phoneno.exist': 'Số điện thoại đã được đăng ký',
+        'regist.phoneno.required': 'Hãy nhập số điện thoại',
+        'regist.password.required': 'Hãy nhập mật khẩu',
 
         // home
         'home.diary': 'Nhật ký',
