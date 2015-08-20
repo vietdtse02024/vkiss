@@ -1,7 +1,7 @@
 'use strict'
 angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova', 'ngMessages'])
 
-.run(function ($ionicPlatform, $rootScope, IConstants, $http, $state, $cordovaDevice) {
+.run(function ($ionicPlatform, $rootScope, IConstants, $http, $state, $cordovaDevice, $ionicPopup, $translate) {
     document.addEventListener("deviceready", function () {
         $cordovaPlugin.someFunction().then(success, error);
     }, false);
@@ -28,6 +28,17 @@ angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova', 'ngMe
                 $state.go('app.tabs');
             }
         });
+    };
+    
+    // An alert dialog
+    $rootScope.showAlert = function(title, message) {
+      var alertPopup = $ionicPopup.alert({
+        title: $translate.instant(title),
+        template: $translate.instant(message)
+      });
+      alertPopup.then(function(res) {
+        console.log('Thank you for not eating my delicious ice cream cone');
+      });
     };
 })
 

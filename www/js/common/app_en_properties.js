@@ -8,6 +8,7 @@ angular.module('fyviapp')
     });
     $translateProvider.translations('vi', {
         'login.title': 'Đăng nhập',
+        'popup.error.happen': 'Có lỗi xảy ra',
 
         // regist
         'regist.title': 'Đăng ký tài khoản',
@@ -19,6 +20,7 @@ angular.module('fyviapp')
         'regist.phoneno.exist': 'Số điện thoại đã được đăng ký',
         'regist.phoneno.required': 'Hãy nhập số điện thoại',
         'regist.password.required': 'Hãy nhập mật khẩu',
+        'regist.info.required': 'Hãy nhập thông tin',
 
         // home
         'home.diary': 'Nhật ký',

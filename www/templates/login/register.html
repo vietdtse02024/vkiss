@@ -3,14 +3,11 @@
     <h1 class="title">{{'regist.title' | translate}}</h1>
   </ion-header-bar>
   <ion-content>
-    <form ng-submit="regist(registForm.$valid, registData)" name="registForm" novalidate>
+    <form ng-submit="regist(registData)" novalidate>
       <div class="list">
         <label class="item item-input">
         	<span class="input-label">{{'regist.phone_no' | translate}}</span>
-        	<input type="tel" ng-model="registData.phoneNumber" name="phoneNumber" maxlength="15" valid-number required>
-  			<div ng-if="registForm.$submitted" ng-messages="registForm.phoneNumber.$error" class="error-messages ng-active">
-        		<div ng-message="required">{{'regist.phoneno.required' | translate }}</div>
-			</div>
+        	<input type="tel" ng-model="registData.phoneNumber" maxlength="15" valid-number required>
         </label>
         <label class="item item-input">
             <span class="input-label">{{'regist.full_name' | translate}}</span>
@@ -18,7 +15,7 @@
         </label>
         <label class="item item-input">
             <span class="input-label">{{'regist.password' | translate}}</span>
-            <input type="password" ng-model="registData.password" maxlength="50">
+            <input type="password" ng-model="registData.password" maxlength="50" required>
         </label>
         <label class="item">
             <button class="button button-block button-positive" type="submit">{{'btn.regist' | translate}}</button>

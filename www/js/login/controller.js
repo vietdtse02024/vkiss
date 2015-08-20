@@ -7,8 +7,12 @@ angular.module('fyviapp')
         $scope.uuid = $cordovaDevice.getUUID();
     };
 
-    $scope.regist = function (valid, registData) {
-    	if (!valid) {
+    $scope.regist = function (registData) {
+    	if (!registData) {
+    		$scope.showAlert('popup.error.happen', 'regist.info.required');
+    		return
+    	}
+    	if (!$scope.validateInput(registData)) {
 			console.log("validate fail");
 			return;
     	}else {
@@ -26,4 +30,16 @@ angular.module('fyviapp')
 	        });
     	}
     };
+    $scope.validateInput = function(registData){
+    	var phoneNo = registData.phoneNumber;
+    	var password = registData.password;
+    	if(!phoneNo || phoneNo.trim() == "") {
+    		$scope.showAlert('popup.error.happen', 'regist.phoneno.required');
+    		return false;
+    	} else if (!password || password.trim() == "") {
+    		$scope.showAlert('popup.error.happen', 'regist.password.required');
+    		return false;
+    	}
+    	return true;
+    }
 });
