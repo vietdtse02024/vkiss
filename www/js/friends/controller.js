@@ -7,4 +7,8 @@
     		$scope.model = response;
         });
     }
+    
+    $scope.findFriends = function() {
+    	
+    };
 });
