@@ -31,6 +31,7 @@ angular.module('fyviapp')
 
         // btn
         'btn.regist': 'Đăng ký',
+        'btn.delete': 'Xóa',
 
     });
     $translateProvider.preferredLanguage('vi');

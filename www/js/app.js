@@ -1,5 +1,5 @@
 'use strict'
-angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova', 'ngMessages'])
+angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
 
 .run(function ($ionicPlatform, $rootScope, IConstants, $http, $state, $cordovaDevice, $ionicPopup, $translate) {
     document.addEventListener("deviceready", function () {
@@ -18,7 +18,7 @@ angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova', 'ngMe
         }
     });
     //$rootScope.uuid = $cordovaDevice.getUUID();
-    $rootScope.uuid = 'fmndbgvdfv564r5345f4x56v4x65v5';
+    $rootScope.uuid = 'fmndbgvdfv564r5345f4x56v4x65v4';
     $rootScope.checkAccountExist = function () {
         $http.get(IConstants.CHECK_ACCOUNT_EXIST_URL + '/' + $rootScope.uuid).success(function (response) {
         	$rootScope.frontUserOnline = response.account;

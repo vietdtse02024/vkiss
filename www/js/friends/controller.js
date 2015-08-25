@@ -1,14 +1,10 @@
 ﻿angular.module('fyviapp')
-.controller('FriendsCtrl', function ($scope, Chats, $http) {
+.controller('FriendsCtrl', function ($scope, Chats, $http, IConstants) {
     $scope.chats = Chats.all();
     
-    $scope.remove = function (chat) { 
-        Chats.remove(chat);
-    }
-
-    $scope.getListFriends = function () {
-        $http.get('http://localhost:8082/fyvi-ws/fyvi/account/get-list-friends').success(function (response) {
-            $scope.model = response;
+    $scope.remove = function (accountIdFriend) { 
+    	$http.get(IConstants.REMOVE_FRIENDS + '/' + $scope.frontUserOnline.accountId + '/' + accountIdFriend).success(function (response) {
+    		$scope.model = response;
         });
-    };
+    }
 });

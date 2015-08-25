@@ -25,6 +25,7 @@ angular.module('fyviapp').config(function($stateProvider){
         views: {
             'tab-friends': {
                 templateUrl: 'templates/friends/tab-friends.html',
+                controller: 'FriendsCtrl'
             }
         }
     })

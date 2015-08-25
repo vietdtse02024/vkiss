@@ -5,6 +5,7 @@ angular.module('fyviapp').service('IConstants', function ($translate) {
     self.CHECK_ACCOUNT_EXIST_URL = self.IP_ADDRESS + "/fyvi-ws/fyvi/account/check-device-exist";
     self.REGIST_ACCOUNT = self.IP_ADDRESS + "/fyvi-ws/fyvi/account/regist-account";
     self.GET_LIST_FRIENDS = self.IP_ADDRESS + "/fyvi-ws/fyvi/home/get-list-friends";
+    self.REMOVE_FRIENDS = self.IP_ADDRESS + "/fyvi-ws/fyvi/home/remove-friends";
 });
 
 

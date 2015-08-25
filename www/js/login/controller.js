@@ -9,7 +9,7 @@ angular.module('fyviapp')
 
     $scope.regist = function (registData) {
     	if (!registData) {
-    		$scope.showAlert('popup.error.happen', 'regist.info.required');
+    		$scope.showAlert('', 'regist.info.required');
     		return
     	}
     	if (!$scope.validateInput(registData)) {
@@ -34,10 +34,10 @@ angular.module('fyviapp')
     	var phoneNo = registData.phoneNumber;
     	var password = registData.password;
     	if(!phoneNo || phoneNo.trim() == "") {
-    		$scope.showAlert('popup.error.happen', 'regist.phoneno.required');
+    		$scope.showAlert('', 'regist.phoneno.required');
     		return false;
     	} else if (!password || password.trim() == "") {
-    		$scope.showAlert('popup.error.happen', 'regist.password.required');
+    		$scope.showAlert('', 'regist.password.required');
     		return false;
     	}
     	return true;

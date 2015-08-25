@@ -1,6 +1,6 @@
 ﻿'use strict'
 angular.module('fyviapp')
-.controller('HomeCtrl', function ($scope, $state, IConstants, $http) {
+.controller('HomeCtrl', function ($scope, $state, IConstants, $http, $rootScope) {
     $scope.doLogin = function () {
         $state.go('login');
     };
