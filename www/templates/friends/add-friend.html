@@ -1,0 +1,14 @@
+<ion-view view-title="{{'add.friend.title' | translate}}">
+	<ion-content class="padding">
+		<div class="list card">
+			<div class="item item-divider">
+				<label class="item item-input">
+        			<input id="txtPhoneNo" type="tel" ng-model="registData.phoneNumber" maxlength="15" valid-number placeholder="{{'add.friend.input.phoneno' | translate}}">
+       			</label>
+			</div>
+			<div class="item item-body">
+		    	<button id="btnSearch" class="button button-block button-calm" type="submit">{{'btn.search_friend' | translate}}</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

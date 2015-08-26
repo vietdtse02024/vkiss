@@ -1,10 +1,10 @@
 <ion-view view-title="{{'home.friends.title' | translate}}"> 
 	<ion-nav-buttons side="right">
-		<button class="button button-icon button-clear ion-ios-plus-empty" ng-click="findFriends()"></button>
+		<a class="button button-icon button-clear ion-ios-plus-empty" href="#/app/tab/add-friend"></a>
 	</ion-nav-buttons>
 	<ion-content>
 	  <ion-list>
-	    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in model.listFriends" type="item-text-wrap" href="#/app/tab/chats/{{item.accountId}}">
+	    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in model.listFriends" type="item-text-wrap" href="#/app/tab/friends/{{item}}">
 	      <img ng-src="img/ionic.png">
 	      <h2>{{item.fullName}}</h2>
 	      <p>{{item.phoneNumber}}</p>

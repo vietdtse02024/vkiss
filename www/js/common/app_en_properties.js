@@ -29,9 +29,15 @@ angular.module('fyviapp')
         'home.friends.title': 'Danh sách bạn bè',
         'last.update.location': 'Mới cập nhật vị trí',
 
+        // add friend
+        'add.friend.title' : 'Thêm bạn',
+        'add.friend.input.phoneno' : 'Vui lòng nhập số điện thoại',
+        
         // btn
         'btn.regist': 'Đăng ký',
         'btn.delete': 'Xóa',
+        'btn.back': 'Quay lại',
+        'btn.search_friend': 'Tìm bạn',
 
     });
     $translateProvider.preferredLanguage('vi');
