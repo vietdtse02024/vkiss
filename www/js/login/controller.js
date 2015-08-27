@@ -10,7 +10,7 @@ angular.module('fyviapp')
     $scope.regist = function (registData) {
     	if (!registData) {
     		$scope.showAlert('', 'regist.info.required');
-    		return
+    		return;
     	}
     	if (!$scope.validateInput(registData)) {
 			console.log("validate fail");

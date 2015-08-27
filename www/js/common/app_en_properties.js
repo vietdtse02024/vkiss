@@ -9,6 +9,7 @@ angular.module('fyviapp')
     $translateProvider.translations('vi', {
         'login.title': 'Đăng nhập',
         'popup.error.happen': 'Có lỗi xảy ra',
+        'popup.cofirm': 'Xác nhận',
 
         // regist
         'regist.title': 'Đăng ký tài khoản',
@@ -32,12 +33,15 @@ angular.module('fyviapp')
         // add friend
         'add.friend.title' : 'Thêm bạn',
         'add.friend.input.phoneno' : 'Vui lòng nhập số điện thoại',
+        'search.friend.phone.not_regist' : 'Số điện thoại này chưa đăng ký FYVI',
+        'search.friend.phone.not_valid' : 'Số điện thoại không hợp lệ',
         
         // btn
         'btn.regist': 'Đăng ký',
         'btn.delete': 'Xóa',
         'btn.back': 'Quay lại',
         'btn.search_friend': 'Tìm bạn',
+        'btn.add_friend': 'Kết bạn',
 
     });
     $translateProvider.preferredLanguage('vi');

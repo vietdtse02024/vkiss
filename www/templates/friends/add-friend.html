@@ -1,14 +1,27 @@
-<ion-view view-title="{{'add.friend.title' | translate}}">
+<ion-view view-title="{{'add.friend.title' | translate}}" ng-init="initSearchFriend()">
 	<ion-content class="padding">
-		<div class="list card">
-			<div class="item item-divider">
-				<label class="item item-input">
-        			<input id="txtPhoneNo" type="tel" ng-model="registData.phoneNumber" maxlength="15" valid-number placeholder="{{'add.friend.input.phoneno' | translate}}">
-       			</label>
+		<form ng-submit="searchFriend(searchData)" novalidate>
+			<div class="list card">
+				<div class="item item-divider">
+					<label class="item item-input">
+	        			<input id="txtPhoneNo" type="tel" ng-model="searchData.phoneNumber" maxlength="15" valid-number placeholder="{{'add.friend.input.phoneno' | translate}}">
+	       			</label>
+				</div>
+				<div class="item item-body">
+			    	<button id="btnSearch" class="button button-block button-calm" type="submit">{{'btn.search_friend' | translate}}</button>
+				</div>
 			</div>
-			<div class="item item-body">
-		    	<button id="btnSearch" class="button button-block button-calm" type="submit">{{'btn.search_friend' | translate}}</button>
+		</form>
+		<ion-list ng-if="model.userFriendsView != null">
+		    <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap">
+		      	<img ng-src="img/ionic.png">
+		      	<h2>{{model.userFriendsView.fullName}}</h2>
+		      	<p>{{model.userFriendsView.phoneNumber}}</p>
+			    <i class="icon ion-male"></i>
+		    </ion-item> 
+		    <div class="item item-body">
+			    <button id="btnAddFriend" class="button button-block button-calm" data-ng-click="addFriend(model.userFriendsView.accountId)">{{'btn.add_friend' | translate}}</button>
 			</div>
-		</div>
+	  	</ion-list> 
 	</ion-content>
 </ion-view>

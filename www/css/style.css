@@ -70,3 +70,9 @@ body {
   margin-top: 15px;
   position: relative;
 }
+.ion-male {
+	color: #11a6ee;
+}
+.ion-female {
+	color: #f50ad2;
+}
