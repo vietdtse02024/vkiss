@@ -7,7 +7,7 @@
     }
     
     $scope.initDetail = function() {
-		$scope.friendSelect = $stateParams.friendSelect;
+		$scope.accountIdSelected = $stateParams.friendSelect;
     };
     
     $scope.initSearchFriend = function() {

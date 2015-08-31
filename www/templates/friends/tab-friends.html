@@ -4,7 +4,7 @@
 	</ion-nav-buttons>
 	<ion-content>
 	  <ion-list>
-	    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in model.listFriends" type="item-text-wrap" href="#/app/tab/friends/{{item}}">
+	    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in model.listFriends" type="item-text-wrap" href="#/app/tab/friends/{{item.accountId}}">
 	      <img ng-src="img/ionic.png">
 	      <h2>{{item.fullName}}</h2>
 	      <p>{{item.phoneNumber}}</p>

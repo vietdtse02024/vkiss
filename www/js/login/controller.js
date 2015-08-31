@@ -34,10 +34,13 @@ angular.module('fyviapp')
     	var phoneNo = registData.phoneNumber;
     	var password = registData.password;
     	if(!phoneNo || phoneNo.trim() == "") {
-    		$scope.showAlert('', 'regist.phoneno.required');
+    		$scope.showAlert('popup.cofirm', 'regist.phoneno.required');
+    		return false;
+    	} else if (registData.phoneNumber.length < 10){
+    		$scope.showAlert('popup.cofirm', 'search.friend.phone.not_valid');
     		return false;
     	} else if (!password || password.trim() == "") {
-    		$scope.showAlert('', 'regist.password.required');
+    		$scope.showAlert('popup.cofirm', 'regist.password.required');
     		return false;
     	}
     	return true;
