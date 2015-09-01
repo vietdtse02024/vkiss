@@ -1,5 +1,6 @@
 ﻿angular.module('fyviapp')
-.controller('MapCtrl', function ($scope, $ionicLoading, MapService) {
+.controller('MapCtrl', function ($scope, $ionicLoading, MapService, $stateParams) {
+	console.log($stateParams);
     $scope.mapCreated = function (map) {
         $scope.map = map;
     };

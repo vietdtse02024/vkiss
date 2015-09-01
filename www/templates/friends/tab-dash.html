@@ -1,6 +1,6 @@
 <ion-view view-title="{{'home.diary' | translate}}"> 
 	<ion-nav-buttons side="right">
-		<a class="button button-icon button-clear ion-ios-refresh-empty" href="#"></a>
+		<a class="button button-icon button-clear ion-ios-refresh-empty" ng-click="refresh()"></a>
 	</ion-nav-buttons>
 	<ion-content class="padding">
 		<div class="list card" ng-repeat="item in model.listFriends">

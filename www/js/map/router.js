@@ -3,7 +3,7 @@
 angular.module('fyviapp').config(function($stateProvider){
     $stateProvider
     .state('app.map', {
-         url: "/map",
+         url: "/map/:friendId",
          views: {
              'menuContent': {
                  templateUrl: "templates/map/map.html",

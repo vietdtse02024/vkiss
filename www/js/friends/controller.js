@@ -1,5 +1,5 @@
 ﻿angular.module('fyviapp')
-.controller('FriendsCtrl', function ($scope, Chats, $http, IConstants, $stateParams) {
+.controller('FriendsCtrl', function ($scope, Chats, $http, IConstants, $stateParams, $state) {
     $scope.remove = function (accountIdFriend) { 
     	$http.get(IConstants.REMOVE_FRIENDS + '/' + $scope.frontUserOnline.accountId + '/' + accountIdFriend).success(function (response) {
     		$scope.model = response;
@@ -30,6 +30,10 @@
     			$scope.showAlert('popup.cofirm', 'search.friend.phone.not_regist');
     		}
         });
+    };
+    
+    $scope.startDirection = function(accountIdSelected) {
+    	$state.go('app.map', {'friendId' : accountIdSelected});
     };
     
 });

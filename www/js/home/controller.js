@@ -10,4 +10,11 @@ angular.module('fyviapp')
     		$scope.model = response;
         });
     };
+    
+    $scope.goToDash = function() {
+    	$scope.initDash();
+    	$state.go('app.tabs.dash');
+    };
+    
+    $scope.initDash();
 });
