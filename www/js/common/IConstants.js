@@ -7,6 +7,7 @@ angular.module('fyviapp').service('IConstants', function ($translate) {
     self.GET_LIST_FRIENDS = self.IP_ADDRESS + "/fyvi-ws/fyvi/home/get-list-friends";
     self.REMOVE_FRIENDS = self.IP_ADDRESS + "/fyvi-ws/fyvi/home/remove-friends";
     self.SEARCH_FRIEND_BY_PHONE = self.IP_ADDRESS + "/fyvi-ws/fyvi/home/find-friends";
+    self.GET_LOCATION = self.IP_ADDRESS + "/fyvi-ws/fyvi/account/get-location";
 });
 
 

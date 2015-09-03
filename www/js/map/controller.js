@@ -1,6 +1,5 @@
 ﻿angular.module('fyviapp')
-.controller('MapCtrl', function ($scope, $ionicLoading, MapService, $stateParams) {
-	console.log($stateParams);
+.controller('MapCtrl', function ($scope, $ionicLoading, MapService, $stateParams, IConstants, $http) {
     $scope.mapCreated = function (map) {
         $scope.map = map;
     };
@@ -61,7 +60,7 @@
         navigator.geolocation.getCurrentPosition(function (pos) {
             console.log('Got pos', pos);
             var curPos = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-            var pos2 = new google.maps.LatLng(MapService.getLat(), MapService.getLng());
+            var pos2 = new google.maps.LatLng($scope.locationHistory[0].latitude, $scope.locationHistory[0].longtitude);
             var LatLngArr = [curPos, pos2];
             $scope.createMarker(curPos);
             //$scope.createMarker(pos2);
@@ -70,6 +69,13 @@
             $ionicLoading.hide()
         }, function (error) {
             alert('Unable to get location: ' + error.message);
+        });
+    };
+    
+    $scope.getLocation = function() {
+    	$http.get(IConstants.GET_LOCATION + '/' + $stateParams.friendId).success(function (response) {
+    		$scope.locationHistory = response.listLocationHistory;
+    		$scope.centerOnMe();
         });
     };
 });
