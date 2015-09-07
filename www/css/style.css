@@ -14,10 +14,9 @@ body {
 }
 
 .marker-labels {
-    width: 160px;
+/*     width: 160px; */
     padding: 10px;
     background: #fff;
-    border-radius: 5px;
     text-align: center;
 }
 
