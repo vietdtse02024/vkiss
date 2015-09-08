@@ -8,15 +8,17 @@
     yourAvatar.setAttribute("style","width:30px; height: 30px");
     yourAvatar.src = "http://google-maps-utility-library-v3.googlecode.com/svn-history/r150/trunk/markerwithlabel/examples/home.jpg";
     
-    $scope.createMarker = function (latLng) {
+    $scope.createMarker = function (latLng, icon, avatar) {
         $scope.marker = new MarkerWithLabel({
             position: latLng,
             draggable: false,
             raiseOnDrag: true,
             animation: google.maps.Animation.DROP,
             map: $scope.map,
-            labelContent: yourAvatar,
-            labelAnchor: new google.maps.Point(30, 100),
+            icon: icon,
+            labelContent: '<img src="http://google-maps-utility-library-v3.googlecode.com/svn-history/r150/trunk/markerwithlabel/examples/home.jpg" style="width:30px; height: 30px"></img>' 
+            	+ '<br />' + '<span>av</span>',
+            labelAnchor: new google.maps.Point(25, 100),
             labelClass: "marker-labels", // the CSS class for the label
             labelStyle: { opacity: 0.75 }
         });
@@ -34,6 +36,7 @@
         var directionsService = new google.maps.DirectionsService();
         var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
         directionsDisplay.setMap($scope.map);
+        directionsDisplay.setOptions ( { suppressMarkers: true } );
         var selectedMode = 'DRIVING';
         var request = {
             origin: curPos,
@@ -69,8 +72,8 @@
             var curPos = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
             var pos2 = new google.maps.LatLng($scope.locationHistory[0].latitude, $scope.locationHistory[0].longtitude);
             var LatLngArr = [curPos, pos2];
-            $scope.createMarker(curPos);
-            //$scope.createMarker(pos2);
+            $scope.createMarker(curPos, null, null);
+            $scope.createMarker(pos2, null, null);
             $scope.createDirections(curPos, pos2);
             $scope.map.setCenter(curPos);
             $ionicLoading.hide();
