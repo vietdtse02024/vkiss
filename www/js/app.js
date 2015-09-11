@@ -18,6 +18,7 @@ angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
         }
     });
     //$rootScope.uuid = $cordovaDevice.getUUID();
+//    console.log(window.localStorage['name']);
     $rootScope.uuid = 'fmndbgvdfv564r5345f4x56v4x65v4';
     $rootScope.checkAccountExist = function () {
         $http.get(IConstants.CHECK_ACCOUNT_EXIST_URL + '/' + $rootScope.uuid).success(function (response) {
