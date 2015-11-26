@@ -42,12 +42,15 @@ angular.module('fyviapp')
         'btn.back': 'Quay lại',
         'btn.search_friend': 'Tìm bạn',
         'btn.add_friend': 'Kết bạn',
+        'btn.edit_profile': 'Sửa thông tin',
         
         // menu
         'menu.item.logout' : 'Thoát tài khoản',
         'menu.item.dashboard' : 'Nhật ký',
         'menu.item.sys_setting' : 'Cài đặt hệ thống',
         'menu.item.account_setting' : 'Cài đặt tài khoản',
+        
+        // setting
 
     });
     $translateProvider.preferredLanguage('vi');

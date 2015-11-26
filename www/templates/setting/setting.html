@@ -1,9 +1,22 @@
-<ion-view view-title="Account">
-  <ion-content>
-    <ion-list>
-    <ion-toggle ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
-  </ion-content>
+<ion-view title="Page">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-divider">Card</div>
+            <div class="item item-body">
+                <div style="line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; width: 100%; height: auto; background-color: rgb(255, 255, 255);">
+                    <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+                </div>
+                <ion-list>
+                    <ion-item>Item 1</ion-item>
+                    <ion-item>Item 2</ion-item>
+                    <ion-item ng-click="edit('1')">Item 3</ion-item>
+                    <label class="item item-input" ng-show="editProfile=='1'">
+                        <span class="input-label">Input</span>
+                        <input type="text" placeholder="">
+                    </label>
+                </ion-list>
+                <button class="button button-positive button-block  icon-right ion-android-checkmark">{{'btn.edit_profile' | translate}}</button>
+            </div>
+        </div>
+    </ion-content>
 </ion-view>
