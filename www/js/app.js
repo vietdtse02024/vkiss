@@ -2,16 +2,16 @@
 angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
 
 .run(function ($ionicPlatform, $rootScope, IConstants, $http, $state, $cordovaDevice, $ionicPopup, $translate, $ionicLoading) {
-    document.addEventListener("deviceready", function () {
-        $cordovaPlugin.someFunction().then(success, error);
-    }, false);
+//    document.addEventListener("deviceready", function () {
+//        $cordovaPlugin.someFunction().then(success, error);
+//    }, false);
 
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
-        if (window.cordova && window.cordova.plugins.Keyboard) {
-            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        }
+//        if (window.cordova && window.cordova.plugins.Keyboard) {
+//            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+//        }
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
             StatusBar.styleDefault();
