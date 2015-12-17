@@ -30,11 +30,12 @@ angular.module('fyviapp')
         'home.friends.title': 'Danh sách bạn bè',
         'last.update.location': 'Mới cập nhật vị trí',
 
-        // add friend
+        // friend
         'add.friend.title' : 'Thêm bạn',
         'add.friend.input.phoneno' : 'Vui lòng nhập số điện thoại',
         'search.friend.phone.not_regist' : 'Số điện thoại này chưa đăng ký FYVI',
         'search.friend.phone.not_valid' : 'Số điện thoại không hợp lệ',
+        'start.direction' : 'Bắt đầu tìm đường',
         
         // btn
         'btn.regist': 'Đăng ký',

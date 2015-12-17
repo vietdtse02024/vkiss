@@ -3,17 +3,17 @@
   	<div class="list card">
 		<div class="item item-avatar">
 		  <img ng-src="img/ionic.png">
-		  <h2>{{accountIdSelected}}</h2>
-		  <p>Nine Inch Nails</p>
+		  <h2>{{account.fullName}}</h2>
+		  <p>{{account.phoneNumber}}</p>
 		</div>
-		
-		<div class="item item-image">
-		  <img src="img/ionic.png">
+		<div class="item item-image" ng-controller="MapCtrl" style="height: 350px" ng-init="getLocation(accountIdSelected)">
+	        <map on-create="mapCreated(map)"></map>
 		</div>
 		<a class="item item-icon-left assertive" data-ng-click="startDirection(accountIdSelected)">
-		  <i class="icon ion-music-note"></i>
-		  Start listening
+		  <i class="icon ion-android-locate"></i>
+		  {{'start.direction' | translate}}
 		</a>
 	</div>
+	
   </ion-content>>
 </ion-view>

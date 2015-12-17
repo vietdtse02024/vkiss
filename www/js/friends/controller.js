@@ -1,5 +1,5 @@
 ﻿angular.module('fyviapp')
-.controller('FriendsCtrl', function ($scope, Chats, $http, IConstants, $stateParams, $state) {
+.controller('FriendsCtrl', function ($scope, Chats, $http, IConstants, $stateParams, $state, $ionicLoading) {
     $scope.remove = function (accountIdFriend) { 
     	$http.get(IConstants.REMOVE_FRIENDS + '/' + $scope.frontUserOnline.accountId + '/' + accountIdFriend).success(function (response) {
     		$scope.model = response;
@@ -7,7 +7,10 @@
     }
     
     $scope.initDetail = function() {
-		$scope.accountIdSelected = $stateParams.friendSelect;
+    	$scope.accountIdSelected = $stateParams.friendSelect
+    	$http.get(IConstants.GET_ACCOUNT_BY_ID + '/' + $scope.accountIdSelected).success(function (response) {
+    		$scope.account = response.account;
+        });
     };
     
     $scope.initSearchFriend = function() {
@@ -35,5 +38,4 @@
     $scope.startDirection = function(accountIdSelected) {
     	$state.go('app.map', {'friendId' : accountIdSelected});
     };
-    
 });
