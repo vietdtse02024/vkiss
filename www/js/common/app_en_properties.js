@@ -36,6 +36,7 @@ angular.module('fyviapp')
         'search.friend.phone.not_regist' : 'Số điện thoại này chưa đăng ký FYVI',
         'search.friend.phone.not_valid' : 'Số điện thoại không hợp lệ',
         'start.direction' : 'Bắt đầu tìm đường',
+        'last.time.position' : 'Lần cập nhật cuối',
         
         // btn
         'btn.regist': 'Đăng ký',

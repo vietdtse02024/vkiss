@@ -3,8 +3,8 @@
   	<div class="list card">
 		<div class="item item-avatar">
 		  <img ng-src="img/ionic.png">
-		  <h2>{{account.fullName}}</h2>
-		  <p>{{account.phoneNumber}}</p>
+		  <h2>{{accountInfo.fullName}}</h2>
+		  <p>{{'last.time.position' | translate}}: {{accountInfo.lastUpdateLocation}}</p>
 		</div>
 		<div class="item item-image" ng-controller="MapCtrl" style="height: 350px" ng-init="getLocation(accountIdSelected)">
 	        <map on-create="mapCreated(map)"></map>

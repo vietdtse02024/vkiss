@@ -9,7 +9,7 @@
     $scope.initDetail = function() {
     	$scope.accountIdSelected = $stateParams.friendSelect
     	$http.get(IConstants.GET_ACCOUNT_BY_ID + '/' + $scope.accountIdSelected).success(function (response) {
-    		$scope.account = response.account;
+    		$scope.accountInfo = response.accountInfo;
         });
     };
     
