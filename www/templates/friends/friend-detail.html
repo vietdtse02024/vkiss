@@ -1,4 +1,7 @@
-<ion-view view-title="" ng-init="initDetail()">
+<ion-view view-title="{{'friend.detail.title' | translate}}" ng-init="initDetail()">
+	<ion-nav-buttons side="left">
+		<a class="button button-icon button-clear ion-ios-arrow-back" ng-click="goBack('app.tabs.friends')"></a>
+	</ion-nav-buttons>
   <ion-content class="padding">
   	<div class="list card">
 		<div class="item item-avatar">

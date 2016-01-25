@@ -38,4 +38,8 @@
     $scope.startDirection = function(accountIdSelected) {
     	$state.go('app.map', {'friendId' : accountIdSelected});
     };
+    
+    $scope.addFriends = function(accountId) {
+    	
+    };
 });

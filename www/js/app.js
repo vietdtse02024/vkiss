@@ -1,7 +1,7 @@
 'use strict'
 angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
 
-.run(function ($ionicPlatform, $rootScope, IConstants, $http, $state, $cordovaDevice, $ionicPopup, $translate, $ionicLoading) {
+.run(function ($ionicPlatform, $rootScope, IConstants, $http, $state, $cordovaDevice, $ionicPopup, $translate, $ionicLoading, $ionicHistory) {
 //    document.addEventListener("deviceready", function () {
 //        $cordovaPlugin.someFunction().then(success, error);
 //    }, false);
@@ -47,6 +47,9 @@ angular.module('fyviapp', ['ionic', 'pascalprecht.translate', 'ngCordova'])
     };
     $rootScope.hideLoading = function() {
     	$ionicLoading.hide();
+    };
+    $rootScope.goBack = function(name) {
+    	$state.go(name);
     };
 })
 

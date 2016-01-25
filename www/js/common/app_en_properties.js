@@ -32,6 +32,7 @@ angular.module('fyviapp')
 
         // friend
         'add.friend.title' : 'Thêm bạn',
+        'friend.detail.title' : 'Thông tin bạn bè',
         'add.friend.input.phoneno' : 'Vui lòng nhập số điện thoại',
         'search.friend.phone.not_regist' : 'Số điện thoại này chưa đăng ký FYVI',
         'search.friend.phone.not_valid' : 'Số điện thoại không hợp lệ',

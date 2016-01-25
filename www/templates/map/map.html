@@ -1,7 +1,7 @@
 <ion-view view-title="Google Map" ng-init="getLocation(null)">
-    <ion-header-bar class="bar-stable">
-        <h1 class="title">Map</h1>
-    </ion-header-bar>
+    <ion-nav-buttons side="right">
+		<a class="button button-icon button-clear ion-android-done" ng-click="goBack('app.tabs.friends')"></a>
+	</ion-nav-buttons>
     <ion-content scroll="false">
         <map on-create="mapCreated(map)" id="map-canvas"></map>
         <ion-footer-bar class="bar-stable">
