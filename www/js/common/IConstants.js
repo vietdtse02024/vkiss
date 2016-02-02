@@ -9,7 +9,7 @@ angular.module('fyviapp').service('IConstants', function ($translate) {
     self.SEARCH_FRIEND_BY_PHONE = self.IP_ADDRESS + "/fyvi-ws/fyvi/home/find-friends";
     self.GET_LOCATION = self.IP_ADDRESS + "/fyvi-ws/fyvi/account/get-location";
     self.GET_ACCOUNT_BY_ID = self.IP_ADDRESS + "/fyvi-ws/fyvi/account/get-account-by-id";
-    self.ADD_FRIEND = self.IP_ADDRESS + "/fyvi-ws/fyvi/account/get-account-by-id";
+    self.ADD_FRIEND = self.IP_ADDRESS + "/fyvi-ws/fyvi/friends/add-friend";
 });
 
 

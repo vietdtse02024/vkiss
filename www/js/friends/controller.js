@@ -39,7 +39,10 @@
     	$state.go('app.map', {'friendId' : accountIdSelected});
     };
     
-    $scope.addFriends = function(accountId) {
-    	
+    $scope.addFriend = function(friendId) {
+    	$scope.showLoading();
+    	$http.get(IConstants.ADD_FRIEND + '/' + $scope.frontUserOnline.accountId + '/' + friendId).success(function (response) {
+    		$scope.hideLoading();
+        });
     };
 });
