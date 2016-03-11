@@ -45,4 +45,8 @@
     		$scope.hideLoading();
         });
     };
+    
+    $scope.checkStatusRelation = function(accountIdFriend) {
+    	
+    };
 });
